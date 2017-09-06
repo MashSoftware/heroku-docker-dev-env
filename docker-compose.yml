@@ -7,6 +7,7 @@ services:
     env_file: .env
     depends_on:
       - db
+      - redis
     volumes:
       - ./webapp:/opt/webapp
   db:
