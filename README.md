@@ -1,4 +1,4 @@
-# Heroku Docker based development Environment
+# Heroku Docker based development environment
 
 Uses the official Heroku and add-on providers images and versions in line with Heroku's production environment.
 
