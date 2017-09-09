@@ -4,7 +4,7 @@ Uses the official Heroku and add-on providers images and versions in line with H
 
 ## Prerequisites
 * [Docker Compose](https://docs.docker.com/compose/)
-* [Docker Engine](https://docs.docker.com/engine/)
+* [Docker Engine](https://docs.docker.com/engine/) (on Windows & macOS)
 
 ## Getting Started
 
