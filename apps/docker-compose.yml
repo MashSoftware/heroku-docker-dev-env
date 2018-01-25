@@ -2,6 +2,7 @@ version: '2'
 services:
   thing-api:
     build: thing-api
+    container_name: thing-api
     ports:
       - "5000:5000"
     env_file: .env
@@ -12,6 +13,7 @@ services:
       - ./webapp:/opt/webapp
   thing-ui:
     build: thing-ui
+    container_name: thing-ui
     ports:
       - "5001:5001"
     env_file: .env
