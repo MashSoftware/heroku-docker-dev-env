@@ -1,9 +1,19 @@
 version: '2'
 services:
-  web:
-    build: .
+  thing-api:
+    build: thing-api
     ports:
       - "5000:5000"
+    env_file: .env
+    depends_on:
+      - db
+      - redis
+    volumes:
+      - ./webapp:/opt/webapp
+  thing-ui:
+    build: thing-ui
+    ports:
+      - "5001:5001"
     env_file: .env
     depends_on:
       - db
