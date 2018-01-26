@@ -7,7 +7,7 @@ services:
       - "5000:5000"
     env_file: .env
     depends_on:
-      - db
+      - postgres
       - redis
     volumes:
       - ./webapp:/opt/webapp
@@ -18,15 +18,17 @@ services:
       - "5001:5001"
     env_file: .env
     depends_on:
-      - db
+      - postgres
       - redis
     volumes:
       - ./webapp:/opt/webapp
-  db:
+  postgres:
+    container_name: postgres
     image: postgres:10.1
     ports:
       - "5432:5432"
   redis:
+    container_name: redis
     image: redis:3.2.8
     ports:
       - "6379:6379"
